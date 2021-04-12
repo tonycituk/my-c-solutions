@@ -16,7 +16,7 @@ Donde:
 int main()
 {
     int n;
-    float i, sumatoria = 0;
+    float sumatoria = 0;
     bool esNegativo = false;
 
     do
@@ -29,11 +29,11 @@ int main()
         }
     } while (n <= 0);
 
-    for (i = 1; i <= n; i++)
+    for (int i = 1; i <= n; i++)
     {
         //float signo = esNegativo ? -1 : 1;
         //printf("%s1/%0.0lf = %lf\n", esNegativo ? "-" : "", i, signo * (1 / i));
-        sumatoria += (esNegativo ? -1 : 1) * (1 / i);
+        sumatoria += (esNegativo ? -1 : 1) * (1 / (float)i);
         esNegativo = esNegativo ? false : true;
     }
 

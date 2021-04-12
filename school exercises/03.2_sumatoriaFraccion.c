@@ -3,7 +3,7 @@
 int main()
 {
     int n;
-    float i, sumatoria = 0;
+    float sumatoria = 0;
     do
     {
         printf("Ingresa el valor de n: ");
@@ -14,10 +14,10 @@ int main()
         }
     } while (n <= 0);
 
-    for (i = 1; i <= n; i++)
+    for (int i = 1; i <= n; i++)
     {
-        printf("1/%0.0lf = %lf \n", i, 1 / i);
-        sumatoria += 1 / i;
+        printf("1/%d = %lf \n", i, 1.0 /(float) i);
+        sumatoria += 1.0 /(float) i;
     }
     printf("%lf", sumatoria);
 
